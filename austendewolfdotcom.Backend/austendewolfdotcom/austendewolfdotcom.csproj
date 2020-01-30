@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'ADeWolf.com' ">
+    <StartAction>Project</StartAction>
+    <ApplicationURL>http://localhost:5002</ApplicationURL>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="$(AspNetCoreAppRuntimeFrameworkVersion)">
+      <IsImplicitlyDefined>true</IsImplicitlyDefined>
+      <PrivateAssets>all</PrivateAssets>
+      <Publish>true</Publish>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="SendGrid" Version="9.12.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Configuration\" />
+    <Folder Include="Services\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Interfaces\Services\" />
+    <Folder Include="Interfaces\DTOs\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="DTOs\Email\" />
+    <Folder Include="DTOs\Contact\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\assets\fonts\Bauhaus\Bauhaus_.ttf" />
+    <Content Remove="wwwroot\assets\scss\partials\_text.scss" />
+    <Content Remove="wwwroot\assets\fonts\718\sevenoneeight-bold-webfont.woff2" />
+    <Content Remove="wwwroot\assets\fonts\Avenir-Next\AvenirNextLTPro-Demi.otf" />
+    <Content Remove="wwwroot\assets\fonts\Caviar-Dreams\CaviarDreams.ttf" />
+    <Content Remove="wwwroot\assets\images\logo.png" />
+    <Content Remove="wwwroot\assets\fonts\Caviar-Dreams\Caviar_Dreams_Bold.ttf" />
+    <Content Remove="wwwroot\assets\fonts\Bauhaus\install-a-new-font.txt" />
+    <Content Remove="wwwroot\assets\scss\base\_base.scss" />
+    <Content Remove="wwwroot\assets\scss\base\_positioning.scss" />
+    <Content Remove="wwwroot\assets\scss\base\_sizes.scss" />
+  </ItemGroup>
+</Project>

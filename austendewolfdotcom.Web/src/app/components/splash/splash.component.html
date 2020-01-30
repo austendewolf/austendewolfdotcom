@@ -1,0 +1,287 @@
+<app-navbar></app-navbar>
+<div class="full-height align-items-center container">
+    <div class="splash-text">
+        <p class="text-teal text-roboto-mono">Hi, my name is</p>
+        <span class="text-off-white text-avenir-heavy font-weight-bolder display-2 d-block">Austen DeWolf</span>
+        <span class="text-muted text-avenir-heavy display-4 d-block text-nowrap">I build
+            <p *ngIf="currentWord == 1" class="animated flipInX d-inline-block">for the web.</p>
+            <p *ngIf="currentWord == 2" class="animated flipInX d-inline-block">for scale.</p>
+            <p *ngIf="currentWord == 3" class="animated flipInX d-inline-block">for simplicity.</p>
+            <p *ngIf="currentWord == 4" class="animated flipInX d-inline-block">for the <span class="text-white">user</span>.</p>
+        </span>
+        <div class="row margin-top-med">
+            <div class="col-xl-6 col-lg-7 col-md-9 col-sm-12">
+                <p class="text-muted margin-top-xs text-roboto-mono">
+                    I'm a software engineer who specializes in designing and developing <strong class="text-light">intuitive</strong>, <strong class="text-light">efficient</strong>, and <strong class="text-light">resilient</strong> applications for the web.
+                </p>
+                <div class="margin-top-lrg">
+                    <a class="btn btn-teal margin-right-sml" href="#projects">View My Work</a>
+                    <a class="btn btn-outline-teal margin-right-sml" href="#contact">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="aboutMe" class="full-height align-items-center container text-off-white margin-top-xlg">
+    <div class="align-items-start w-100">
+        <h3 class="text-off-white section-header text-avenir-heavy font-weight-bolder margin-bottom-xlg">
+            <span class="text-teal margin-right-sml text-monospace">[0]</span> About Me
+        </h3>
+        <div class="row">
+            <div class="col-xl-7 col-lg-8 col-md-12 text-muted">
+                <p>
+                    I'm Austen; a full-stack software engineer based out of Seattle, Washington. I design
+                    and develop applications and services for the web. I have a natural curiosity about all
+                    things development, and enjoy working with teams to build high-impact, customer-facing applications that make peoples lives easier.
+                </p>
+                <p>
+                    <span class="text-white">What makes me tick:</span> taking seed ideas and building them from the ground up into functional <span class="text-white">products</span>.
+                    Building an application is only part of the equation; Successful product development involves transforming applications into functional
+                    products by listening, iterating, and consistently shipping that product to customers in a seamless manner.
+                </p>
+                <p>
+                    These are the technologies that I use most frequently:
+                </p>
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="bracket-list text-nowrap">
+                            <li>Javascript (ES6+)</li>
+                            <li>HTML & (S)CSS</li>
+                            <li>Angular</li>
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>NPM / Yarn</li>
+                            <li>Webpack</li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="bracket-list text-nowrap">
+                            <li>.NET / C#</li>
+                            <li>Entity Framework</li>
+                            <li>SQL (MS SQL / Postgres)</li>
+                            <li>Java</li>
+                            <li>Azure, AWS, Heroku</li>
+                            <li>Docker</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-4 col-md-12 text-center d-none d-lg-block">
+                <div class="image-container">
+                    <div class="image-accent"></div>
+                    <img class="img-fluid rounded-circle" src="../../../assets/images/Austen-02.jpg" alt="logo"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="experience" class="full-height align-items-center container margin-top-xlg">
+    <div class="align-items-start w-100">
+        <h3 class="text-off-white section-header text-avenir-heavy font-weight-bolder margin-bottom-xlg">
+            <span class="text-teal margin-right-sml">[1]</span> Experience
+        </h3>
+        <div class="row text-muted">
+            <div class="d-none d-md-block col-4">
+                <ul class="tabs vertical">
+<!--                    <li [ngClass]="{'active': activeTab === 'tagboard'}" (click)="activeTab = 'tagboard'">Tagboard</li>-->
+                    <li [ngClass]="{'active': activeTab === 'smartsheet'}" (click)="handleClickTab($event,'smartsheet')">Smartsheet</li>
+<!--                    <li [ngClass]="{'active': activeTab === 'flatly'}" (click)="handleClickTab($event,'flatly')">Flatly</li>-->
+                    <li [ngClass]="{'active': activeTab === 'rdi'}" (click)="handleClickTab($event,'rdi')">RDI</li>
+                    <li [ngClass]="{'active': activeTab === 'bgo'}" (click)="handleClickTab($event, 'bgo')">BGO Law</li>
+                </ul>
+            </div>
+            <div class="d-md-none">
+                <ul class="tabs horizontal padding-left-zero">
+                    <!--                    <li [ngClass]="{'active': activeTab === 'tagboard'}" (click)="activeTab = 'tagboard'">Tagboard</li>-->
+                    <li [ngClass]="{'active': activeTab === 'smartsheet'}" (click)="handleClickTab($event,'smartsheet')">Smartsheet</li>
+<!--                    <li [ngClass]="{'active': activeTab === 'flatly'}" (click)="handleClickTab($event,'flatly')">Flatly</li>-->
+                    <li [ngClass]="{'active': activeTab === 'rdi'}" (click)="handleClickTab($event,'rdi')">RDI</li>
+                    <li [ngClass]="{'active': activeTab === 'bgo'}" (click)="handleClickTab($event, 'bgo')">BGO Law</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-8" *ngIf="activeTab === 'tagboard'">
+                <h4 class="text-nowrap">
+                    <span class="text-off-white text-avenir-heavy">Sr. Fullstack Engineer</span>
+                    <span class="text-teal text-avenir-heavy"> @ Tagboard</span>
+                </h4>
+                <p class="text-muted text-roboto-mono"><small>TBD</small></p>
+                <ul class="bracket-list">
+
+                </ul>
+            </div>
+            <div class="col-12 col-md-8" *ngIf="activeTab === 'smartsheet'">
+                <h4 class="text-nowrap">
+                    <span class="text-off-white text-avenir-heavy">Software Engineer</span>
+                    <span class="text-teal"> @ Smartsheet</span>
+                </h4>
+                <p class="text-muted text-roboto-mono"><small>May 2018 - January 2019</small></p>
+                <ul class="bracket-list">
+                    <li>Actively drove and managed development for critical features by designing, tasking, and working with a team of engineers to ensure successful delivery</li>
+                    <li>Delivered complex design documents by working across teams/pillars to better understand the complex interactions between the distributed components/services of the Smartsheet platform</li>
+                    <li>Worked hand-in-hand with junior engineers via pair programming, design sessions, and code reviews to ensure quality of the end product</li>
+                    <li>Engaged directly with Product, Engineering, and UX during early-stage product design discussions to ensure viability of potential features</li>
+                </ul>
+
+                <h4 class="text-nowrap margin-top-xlg">
+                    <span class="text-off-white text-avenir-heavy">Solutions Architect</span>
+                    <span class="text-teal"> @ Smartsheet</span>
+                </h4>
+                <p class="text-muted text-roboto-mono"><small>November 2016 - May 2018</small></p>
+                <ul class="bracket-list">
+                    <li>Led technical consulting engagements from the late stage sales process, through deployment, delivery, and continued maintenance</li>
+                    <li>Worked closely with our strategic Fortune 500 clients to gain a better understanding of their unique businesses challenges in an effort to propose and deliver enterprise-grade solutions</li>
+                    <li>Leveraged a diverse set of technologies specific to each client to build scalable solutions on top of the Smartsheet platform</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-8" *ngIf="activeTab === 'flatly'">
+                <h4 class="text-nowrap">
+                    <span class="text-off-white text-avenir-heavy">Founder</span>
+                    <span class="text-teal"> @ Flatly</span>
+                </h4>
+                <p class="text-muted text-roboto-mono"><small>January 2016 - December 2018</small></p>
+                <ul class="bracket-list">
+                    <li>Integrations</li>
+                    <li>Resilient services</li>
+                    <li>Sole UX developer</li>
+                    <li>Engage with partners such as Zillow, Apartments.com</li>
+                    <li>Familiarity with legal statutes around tenant rights, and data privacy</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-8" *ngIf="activeTab === 'rdi'">
+                <h4 class="text-nowrap">
+                    <span class="text-off-white text-avenir-heavy">Programmer Analyst</span>
+                    <span class="text-teal text-avenir-heavy"> @ Resource Data Inc.</span>
+                </h4>
+                <p class="text-muted text-roboto-mono"><small>June 2014 - October 2016</small></p>
+                <ul class="bracket-list">
+                    <li>
+                        Worked closely with clients from a oil and gas, government, energy, and telecommunications industries to design, develop and launch new enterprise applications
+                    </li>
+                    <li>
+                        Drove technical discussion between sales team and existing and prospective customers by delivering technical designs, estimates, and Statement's of Work
+                    </li>
+                    <li>
+                        Managed technical software development engagements from late-stage sales through delivery and continued maintenance of the system
+                    </li>
+                    <li>
+                        Developed technology-agnostic approach to ensure successful delivery of software to clients with unique requirements and infrastructures
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-8" *ngIf="activeTab === 'bgo'">
+                <h4 class="text-nowrap">
+                    <span class="text-off-white text-avenir-heavy">Analyst</span>
+                    <span class="text-teal text-avenir-heavy"> @ Bankston Gronning O'Hara</span>
+                </h4>
+                <p class="text-muted text-roboto-mono"><small>May 2012 - December 2013</small></p>
+                <ul class="bracket-list">
+                    <li>
+                        Worked with internal stakeholders to capture current-state business processes, and advise on technologies towards their desired future-state
+                    </li>
+                    <li>
+                        Designed and developed business systems to optimize operations related to file reference and retention
+                    </li>
+                    <li>
+                        Led and delivered project to digitize and index over 30 years of case files
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="projects" class="full-height align-items-center container margin-top-xlg">
+    <div class="align-items-start w-100">
+        <h3 class="text-off-white section-header text-avenir-heavy font-weight-bolder margin-bottom-xlg">
+            <span class="text-teal margin-right-sml">[2]</span> Projects
+        </h3>
+        <div class="row">
+            <div class="col-md-6 col-sm-12 margin-bottom-med">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fal fa-tasks-alt fa-2x text-teal"></i>
+                        <h5 class="card-title margin-top-med">NgFlatForm</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-sm btn-teal">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 margin-bottom-med">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fal fa-tasks-alt fa-2x text-teal"></i>
+                        <h5 class="card-title margin-top-med">NgAlert</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-sm btn-teal">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 margin-bottom-med">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fal fa-tasks-alt fa-2x text-teal"></i>
+                        <h5 class="card-title margin-top-med">Flatly</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-sm btn-teal">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 margin-bottom-med">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fal fa-tasks-alt fa-2x text-teal"></i>
+                        <h5 class="card-title margin-top-med">Dynamic View</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-sm btn-teal">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="contact" class="full-height align-items-center container margin-top-xlg">
+    <div class="align-items-start w-100">
+        <h3 class="text-off-white section-header text-avenir-heavy font-weight-bolder margin-bottom-xlg">
+            <span class="text-teal margin-right-sml">[3]</span> Get In Touch
+        </h3>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-12 text-muted">
+                <p>
+                    <strong class="text-avenir-heavy text-light">Soo.. </strong> are you looking to collaborate on a project or idea? Have a question?
+                    Looking to get your start in software development? Curious about some of my previous work?
+                </p>
+                <p><strong class="text-avenir-heavy text-teal">Reach out!</strong> I respond to these things.</p>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-12 text-center d-lg-block">
+                <app-flat-form [form]="form"></app-flat-form>
+                <button class="btn btn-teal btn-block" [disabled]="form.status !== 'valid'">
+                    <span *ngIf="!contactLoading">Send</span>
+                    <span *ngIf="contactLoading" class="fas fa-spinner-third fa-spin"></span>
+                </button>
+                <p class="text-muted margin-top-sml"><small class="text-monospace">Your contact information will not be made shared to 3rd parties.</small></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="left-vert d-none d-md-block">
+    <ul>
+        <li>
+            <a class="fab fa-github" href="https://github.com/DeAusten" target="_blank"></a>
+        </li>
+        <li>
+            <a class="fab fa-linkedin-in" href="https://www.linkedin.com/in/deausten" target="_blank"></a>
+        </li>
+        <li>
+            <a class="fab fa-instagram" href="https://www.instagram.com/austendewolf" target="_blank"></a>
+        </li>
+        <li>
+            <a class="fab fa-twitter" href="https://twitter.com/austendewolf" target="_blank"></a>
+        </li>
+    </ul>
+</div>
+<div class="right-vert d-none d-md-block">
+    <a class="text-monospace" href="mailto:91.adewolf@gmail.com">91.adewolf@gmail.com</a>
+</div>
+<div class="page-footer text-muted text-center">
+    <strong>About this Site</strong>
+    <span></span>
+</div>

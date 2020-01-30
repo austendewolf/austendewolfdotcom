@@ -1,0 +1,24 @@
+*:focus {
+  outline: none !important;
+}
+.navbar {
+  font-size: .85rem;
+  background: -webkit-radial-gradient(top left, #002438, #031821) no-repeat fixed;
+}
+.navbar-nav {
+  .nav-link {
+    padding: 10px 10px;
+    &:hover {
+      color: #fff !important;
+    }
+  }
+}
+.navbar-toggler {
+  border: none !important;
+  transition: all .2s ease-in-out;
+  transform: rotate(270deg);
+  :hover {
+    transform: scale(1.1);
+    color: #fff;
+  }
+}

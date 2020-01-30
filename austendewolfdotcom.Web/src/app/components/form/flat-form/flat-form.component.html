@@ -1,0 +1,19 @@
+<form class="flat-form animated fadeIn" *ngIf="form" [formGroup]="form">
+  <fieldset [disabled]="form.disabled">
+    <div *ngFor="let controlGroup of form.controlGroups">
+      <strong>{{controlGroup.title}}</strong><small class="text-muted margin-left-xs" *ngIf="count">({{count}})</small>
+      <small class="block text-muted" *ngIf="controlGroup.description">{{controlGroup.description}}</small>
+      <ng-content></ng-content>
+      <!--<div class="direction-break"></div>-->
+      <div class="form-section" [ngClass]="{'naked': controlGroup.disableStyles}">
+        <app-flat-form-control
+          *ngFor="let control of controlGroup.controls"
+          [ngClass]="{'bg-danger': form.disabled}"
+          [form]="form"
+          [controls]="controlGroup.controls"
+          [control]="control">
+        </app-flat-form-control>
+      </div>
+    </div>
+  </fieldset>
+</form>
