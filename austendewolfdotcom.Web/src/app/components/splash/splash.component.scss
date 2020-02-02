@@ -83,7 +83,7 @@
     li {
       margin-bottom: 10px;
       :hover {
-        color: #fff;
+        color: #fff !important;
         cursor: pointer;
         transform: scale(1.1);
       }
@@ -185,6 +185,6 @@
   }
 }
 .page-footer {
-  background-color: #002337;
+  background: -webkit-radial-gradient(top left, #002438, #031821) no-repeat fixed;
   font-size: .9rem;
 }

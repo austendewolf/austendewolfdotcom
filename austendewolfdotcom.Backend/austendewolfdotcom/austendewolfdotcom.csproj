@@ -40,5 +40,6 @@
     <Content Remove="wwwroot\assets\scss\base\_base.scss" />
     <Content Remove="wwwroot\assets\scss\base\_positioning.scss" />
     <Content Remove="wwwroot\assets\scss\base\_sizes.scss" />
+    <Content Remove="wwwroot\AvenirNextLTPro-Light.otf" />
   </ItemGroup>
 </Project>
