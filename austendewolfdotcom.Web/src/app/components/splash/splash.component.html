@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<div class="full-height align-items-center container">
+<div class="full-height align-items-center container animated slideInLeft">
     <div class="splash-text">
         <p class="text-teal text-roboto-mono">Hi, my name is</p>
         <span class="text-off-white text-avenir-heavy font-weight-bolder display-2 d-block">Austen DeWolf</span>
@@ -9,7 +9,7 @@
             <p *ngIf="currentWord == 3" class="animated flipInX d-inline-block">for simplicity.</p>
             <p *ngIf="currentWord == 4" class="animated flipInX d-inline-block">for the <span class="text-white">user</span>.</p>
         </span>
-        <div class="row margin-top-med">
+        <div class="row">
             <div class="col-xl-6 col-lg-7 col-md-9 col-sm-12">
                 <p class="text-muted margin-top-xs text-roboto-mono">
                     I'm a software engineer who specializes in designing and developing <strong class="text-light">intuitive</strong>, <strong class="text-light">efficient</strong>, and <strong class="text-light">resilient</strong> applications for the web.
@@ -22,7 +22,7 @@
         </div>
     </div>
 </div>
-<div id="aboutMe" class="full-height align-items-center container text-off-white margin-top-xlg">
+<div id="aboutMe" class="full-height align-items-center container text-off-white margin-top-xlg animated slideInLeft">
     <div class="align-items-start w-100">
         <h3 class="text-off-white section-header text-avenir-heavy font-weight-bolder margin-bottom-xlg">
             <span class="text-teal margin-right-sml text-monospace">[0]</span> About Me
@@ -75,7 +75,7 @@
         </div>
     </div>
 </div>
-<div id="experience" class="full-height align-items-center container margin-top-xlg">
+<div id="experience" class="full-height align-items-center container margin-top-xlg animated slideInLeft">
     <div class="align-items-start w-100">
         <h3 class="text-off-white section-header text-avenir-heavy font-weight-bolder margin-bottom-xlg">
             <span class="text-teal margin-right-sml">[1]</span> Experience
@@ -189,7 +189,7 @@
         </div>
     </div>
 </div>
-<div id="projects" class="full-height align-items-center container margin-top-xlg">
+<div id="projects" class="full-height align-items-center container margin-top-xlg animated slideInLeft">
     <div class="align-items-start w-100">
         <h3 class="text-off-white section-header text-avenir-heavy font-weight-bolder margin-bottom-xlg">
             <span class="text-teal margin-right-sml">[2]</span> Projects
@@ -238,7 +238,7 @@
         </div>
     </div>
 </div>
-<div id="contact" class="full-height align-items-center container margin-top-xlg">
+<div id="contact" class="full-height align-items-center container margin-top-xlg animated slideInLeft">
     <div class="align-items-start w-100">
         <h3 class="text-off-white section-header text-avenir-heavy font-weight-bolder margin-bottom-xlg">
             <span class="text-teal margin-right-sml">[3]</span> Get In Touch
@@ -252,17 +252,17 @@
                 <p><strong class="text-avenir-heavy text-teal">Reach out!</strong> I respond to these things.</p>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-12 text-center d-lg-block">
-                <app-flat-form [form]="form"></app-flat-form>
-                <button class="btn btn-teal btn-block" [disabled]="form.status !== 'valid'">
+                <ng-flat-form [form]="form"></ng-flat-form>
+                <button (click)="submitContactForm()" class="btn btn-teal btn-block" [disabled]="form.status !== 'valid'">
                     <span *ngIf="!contactLoading">Send</span>
                     <span *ngIf="contactLoading" class="fas fa-spinner-third fa-spin"></span>
                 </button>
-                <p class="text-muted margin-top-sml"><small class="text-monospace">Your contact information will not be made shared to 3rd parties.</small></p>
+                <p class="text-muted margin-top-sml"><small class="text-monospace">Your contact information will not be shared.</small></p>
             </div>
         </div>
     </div>
 </div>
-<div class="left-vert d-none d-md-block">
+<div id="left-vertical" class="left-vert d-none d-md-block animated slideInUp">
     <ul>
         <li>
             <a class="fab fa-linkedin-in" href="https://www.linkedin.com/in/deausten" target="_blank"></a>
@@ -281,17 +281,35 @@
         </li>
     </ul>
 </div>
-<div class="right-vert d-none d-md-block">
+<div id="right-vertical" class="right-vert d-none d-md-block animated slideInUp">
     <a class="text-monospace" href="mailto:91.adewolf@gmail.com">91.adewolf@gmail.com</a>
 </div>
-<div class="page-footer text-muted container">
-    <div class="row">
-        <hr>
-        <div class="col-12">
-            <strong class="text-avenir-heavy">About this Site</strong>
-            <p>This website, and associated resume are inspired by Brittany Chiang's <a class="text-teal" href="https://brittanychiang.com">personal website</a>. The code is open source and can be found on my
-                <a class="text-teal" href="https://github.com/DeAusten">github profile</a>. Feel free to download, fork, comment, or submit pull requests against the repository.</p>
-            <p>- Austen</p>
+<div id="footer" class="page-footer text-muted animated slideInUp">
+    <div class="container">
+        <div class="col-12 text-center">
+            <ul class="social-icons d-md-none d-lg-none d-xl-none">
+                <li>
+                    <a class="fab fa-linkedin-in" href="https://www.linkedin.com/in/deausten" target="_blank"></a>
+                </li>
+                <li>
+                    <a class="fab fa-github" href="https://github.com/DeAusten" target="_blank"></a>
+                </li>
+                <li>
+                    <a class="fab fa-npm" href="https://www.npmjs.com/~deausten" target="_blank"></a>
+                </li>
+                <li>
+                    <a class="fab fa-instagram" href="https://www.instagram.com/austendewolf" target="_blank"></a>
+                </li>
+                <li>
+                    <a class="fab fa-twitter" href="https://twitter.com/austendewolf" target="_blank"></a>
+                </li>
+            </ul>
+            <p>
+                This website, and associated resume are inspired by Brittany Chiang's <a class="text-teal" target="_blank" href="https://github.com/bchiang7/v4">v4 template</a>. The code for
+                <a href="/" class="text-teal">austendewolf<span class="text-muted">dot</span>com</a> is open source and can be found on my
+                <a class="text-teal" target="_blank" href="https://github.com/DeAusten">github profile</a>. Feel free to download, fork, comment, or submit pull requests.
+            </p>
+            <a href="https://github.com/DeAusten/austendewolfdotcom" target="_blank"><span class="badge badge-info">v1.0</span></a>
         </div>
     </div>
 </div>

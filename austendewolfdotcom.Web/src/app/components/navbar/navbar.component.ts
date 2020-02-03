@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ModalService} from '../modal/modal.service';
+import {ModalContext} from '../modal/modal-context';
+import {NavigationModalComponent} from '../navigation-modal/navigation-modal.component';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalService: ModalService) { }
 
   ngOnInit() {
   }
 
+  public openNavigationModal() {
+    this.modalService.create<ModalContext>(
+        NavigationModalComponent,
+        {
+          params: {
+            id: null,
+            modal: 'create'
+          },
+          componentClasses: 'slideInRight modal-lg right',
+          updateRouteOnDismiss: false,
+        },
+      );
+  }
 }

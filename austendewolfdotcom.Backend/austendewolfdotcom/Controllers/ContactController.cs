@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using austendewolfdotcom.DTOs.Contact;
+using austendewolfdotcom.Interfaces.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,8 +12,11 @@ namespace austendewolfdotcom.Controllers
     [Route("api/contacts")]
     public class ContactController : ControllerBase
     {
-        public ContactController()
+        private readonly IContactService _contactService;
+
+        public ContactController(IContactService contactService)
         {
+            this._contactService = contactService;
         }
 
         [HttpPost("")]
@@ -22,6 +26,8 @@ namespace austendewolfdotcom.Controllers
             {
                 return BadRequest(ModelState);
             }
+
+            await this._contactService.Create(model);
 
             return Ok();
         }

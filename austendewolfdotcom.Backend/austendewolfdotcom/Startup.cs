@@ -30,6 +30,7 @@ namespace ADeWolf.com
 
             //  Application Services (Custom)
             services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<IContactService, ContactService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
