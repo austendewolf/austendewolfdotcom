@@ -40,7 +40,7 @@ namespace austendewolfdotcom.Services
                 },
                 From = new MailAddress(contact.Email),
                 TemplateData = templateData,
-            }); ;
+            });
         }
     }
 }
