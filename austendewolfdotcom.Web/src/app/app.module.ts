@@ -20,6 +20,8 @@ import {ModalHeaderComponent} from './components/modal/modal-header/modal-header
 import {ModalFooterComponent} from './components/modal/modal-footer/modal-footer.component';
 import {ModalService} from './components/modal/modal.service';
 import {NavigationModalComponent} from './components/navigation-modal/navigation-modal.component';
+import {MenuComponent} from './components/menu-component/menu.component';
+import { RootComponent } from './components/root/root.component';
 
 @NgModule({
     declarations: [
@@ -34,6 +36,8 @@ import {NavigationModalComponent} from './components/navigation-modal/navigation
         ModalHeaderComponent,
         ModalFooterComponent,
         NavigationModalComponent,
+        MenuComponent,
+        RootComponent,
     ],
     imports: [
         BrowserModule,
