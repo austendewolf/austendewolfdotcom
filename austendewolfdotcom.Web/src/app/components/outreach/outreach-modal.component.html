@@ -1,0 +1,14 @@
+<div class="modal-header">
+    <span class="modal-title">Reach Out</span>
+</div>
+<div class="modal-body">
+    <div class="col-xl-6 col-lg-6 col-md-12 text-center d-lg-block">
+        <ng-flat-form [form]="form"></ng-flat-form>
+        <button (click)="submitContactForm()" class="btn btn-teal btn-block" [disabled]="form.status !== 'valid'">
+            <span *ngIf="!contactLoading">Send</span>
+            <span *ngIf="contactLoading" class="fas fa-spinner-third fa-spin"></span>
+        </button>
+        <p class="text-muted margin-top-sml"><small class="text-monospace">Your contact information will not be shared.</small></p>
+    </div>
+</div>
+<div class="modal-footer"></div>

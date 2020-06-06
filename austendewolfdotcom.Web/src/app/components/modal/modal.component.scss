@@ -16,11 +16,12 @@ app-modal {
   z-index: 10000;
 }
 .app-modal-content {
-  background: -webkit-radial-gradient(top left, #011b29, #021017) no-repeat fixed;
+  background: -webkit-radial-gradient(top left, #ffffff, #f4fcff) no-repeat fixed;
   position: relative;
   width: 100%;
   margin: 125px auto auto;
   z-index: 10000;
+  color: #000;
   &.center {
     position: absolute;
     top: 0;

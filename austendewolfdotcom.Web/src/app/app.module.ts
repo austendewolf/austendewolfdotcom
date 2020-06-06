@@ -21,7 +21,13 @@ import {ModalFooterComponent} from './components/modal/modal-footer/modal-footer
 import {ModalService} from './components/modal/modal.service';
 import {NavigationModalComponent} from './components/navigation-modal/navigation-modal.component';
 import {MenuComponent} from './components/menu-component/menu.component';
-import { RootComponent } from './components/root/root.component';
+import { SoftwareComponent } from './components/software/software.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ConsultingComponent } from './components/consulting/consulting.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { OutreachModalComponent } from './components/outreach/outreach-modal.component';
+import { CardComponent } from './components/card/card.component';
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 
 @NgModule({
     declarations: [
@@ -37,7 +43,12 @@ import { RootComponent } from './components/root/root.component';
         ModalFooterComponent,
         NavigationModalComponent,
         MenuComponent,
-        RootComponent,
+        SoftwareComponent,
+        ProjectsComponent,
+        ConsultingComponent,
+        BlogComponent,
+        OutreachModalComponent,
+        CardComponent,
     ],
     imports: [
         BrowserModule,
@@ -45,7 +56,8 @@ import { RootComponent } from './components/root/root.component';
         ReactiveFormsModule,
         BrowserAnimationsModule,
         HttpClientModule,
-        NgFlatFormModule
+        NgFlatFormModule,
+        LoadingBarHttpClientModule,
     ],
     providers: [
         ContactService,
@@ -54,7 +66,8 @@ import { RootComponent } from './components/root/root.component';
     ],
     entryComponents: [
         ModalComponent,
-        NavigationModalComponent
+        NavigationModalComponent,
+        OutreachModalComponent
     ],
     bootstrap: [AppComponent]
 })

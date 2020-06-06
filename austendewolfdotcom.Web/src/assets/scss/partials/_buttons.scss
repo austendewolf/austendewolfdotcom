@@ -1,5 +1,5 @@
 .btn {
-  border-radius: 1px !important;
+  border-radius: 2px !important;
   font-family: 'Roboto Mono', monospace;
   font-weight: normal !important;
   font-size: .9rem !important;
@@ -8,17 +8,15 @@
     cursor: not-allowed;
   }
 }
-.btn-teal {
-  background-color: rgb(100, 255, 218) !important;
-  &:hover:not([disabled]) {
-    background-color: darken(rgb(100, 255, 218), 30%) !important;
+.btn-warning {
+  color: #fff !important;
+  &:hover {
+    color: #fff !important;
   }
 }
-.btn-outline-teal {
-  color: rgb(100, 255, 218) !important;
-  border: 1px solid rgb(100, 255, 218) !important;
+.btn-outline-warning {
   &:hover {
-    background-color: rgb(100, 255, 218, .2);
+    color: #fff !important;
   }
 }
 .btn-outline-light {

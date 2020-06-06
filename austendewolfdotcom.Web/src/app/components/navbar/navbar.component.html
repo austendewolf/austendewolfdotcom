@@ -1,39 +1,37 @@
-<nav class="navbar navbar-expand-md navbar-dark justify-content-center fixed-top padding-top-med padding-bottom-med animated slideInDown">
-  <a class="navbar-brand" href="#">
+<nav class="navbar navbar-expand-md container fixed-top padding-top-med padding-bottom-med animated slideInDown">
+  <img class="brand-logo" src="../../../assets/images/logo_fill.svg" (click)="handleClickLogo($event)" alt="logo"/>
+  <a class="navbar-brand" (click)="handleClickLogo($event)">
     <span class="text-avenir-heavy">austendewolf</span>
-    <span class="text-avenir-light text-muted">dot</span>
+    <span class="text-avenir-light text-warning brand-dot">.</span>
     <span class="text-avenir-heavy">com</span>
   </a>
   <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span (click)="openNavigationModal()" class="fas fa-signal-alt-3"></span>
   </button>
-  <div class="collapse navbar-collapse text-space-mono" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto text-nowrap">
       <li class="nav-item">
-        <a class="nav-link" href="#aboutMe">
-          <span class="text-teal">[0]</span>
-          About Me
+        <a class="nav-link" routerLink="/consulting">
+          Consulting
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#experience">
-          <span class="text-teal">[1]</span>
-          Experience
+        <a class="nav-link" routerLink="/blog">
+          Blog
         </a>
       </li>
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link" href="#projects">-->
+<!--          Projects</a>-->
+<!--      </li>-->
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link" href="#contact">-->
+<!--          Contact-->
+<!--        </a>-->
+<!--      </li>-->
       <li class="nav-item">
-        <a class="nav-link" href="#projects">
-          <span class="text-teal">[2]</span>
-          Projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#contact">
-          <span class="text-teal">[3]</span>
-          Contact
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="btn btn-sm btn-outline-teal" target="_blank" href="../../../assets/files/resume.pdf">Resume</a>
+<!--        <a class="btn btn-sm btn-warning" target="_blank" href="../../../assets/files/resume.pdf">Resume</a>-->
+        <a class="btn btn-sm btn-warning" (click)="openOutreachModal()">Contact Me</a>
       </li>
     </ul>
   </div>

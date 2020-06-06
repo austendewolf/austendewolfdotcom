@@ -7,12 +7,13 @@
 @import "./partials/buttons";
 
 html, body {
-  height: 100%;
   scroll-behavior: smooth;
-  color: rgb(136, 146, 176);
-  background: -webkit-radial-gradient(top left, #002438, #031821) no-repeat fixed;
+  color: #000;
   font-family: 'Avenir-Pro-Light', serif !important;
-  //overflow-x: hidden;
+  background: -webkit-radial-gradient(top left, #ffffff, #f4fcff) no-repeat fixed;
+}
+.page-content {
+  margin-top: 75px;
 }
 
 $enable-responsive-font-sizes: true;
