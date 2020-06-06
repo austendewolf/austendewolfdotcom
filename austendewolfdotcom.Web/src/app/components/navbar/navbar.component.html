@@ -1,6 +1,41 @@
 <nav class="navbar navbar-expand-md container fixed-top padding-top-med padding-bottom-med animated slideInDown">
   <img class="brand-logo" src="../../../assets/images/logo_fill.svg" (click)="handleClickLogo($event)" alt="logo"/>
-  <a class="navbar-brand" (click)="handleClickLogo($event)">
+  <div class="brand-dropdown" *ngIf="displayBrandDropdown">
+    <div class="brand-dropdown-body">
+      <p class="margin-bottom-sml text-avenir-heavy">Navigation</p>
+      <a class="site-option" (click)="handleClickNavItem($event, '/consulting')">
+        <div class="site-icon">
+          C
+        </div>
+        <span class="text-nowrap">
+          <span class="fas fa-lock text-warning margin-right-xs"></span>
+          <span class="text-warning">https://</span>
+          <span>consulting.austendewolf.com</span>
+        </span>
+      </a>
+      <a class="site-option" (click)="handleClickNavItem($event, '/blog')">
+        <div class="site-icon">
+          B
+        </div>
+        <span class="text-nowrap">
+          <span class="fas fa-lock text-warning margin-right-xs"></span>
+          <span class="text-warning">https://</span>
+          <span>blog.austendewolf.com</span>
+        </span>
+      </a>
+    </div>
+    <div class="brand-dropdown-footer">
+      <span>
+        <span class="text-nowrap margin-zero">
+          <span class="fas fa-lock text-warning margin-right-xs"></span>
+          <span class="text-warning">https://</span>
+          <span>austendewolf.com</span>
+        </span>
+        <span> and it's subdomains are part of blah blah</span>
+      </span>
+    </div>
+  </div>
+  <a class="navbar-brand" (click)="handleClickNavItem($event, '')">
     <span class="text-avenir-heavy">austendewolf</span>
     <span class="text-avenir-light text-warning brand-dot">.</span>
     <span class="text-avenir-heavy">com</span>
@@ -20,15 +55,6 @@
           Blog
         </a>
       </li>
-<!--      <li class="nav-item">-->
-<!--        <a class="nav-link" href="#projects">-->
-<!--          Projects</a>-->
-<!--      </li>-->
-<!--      <li class="nav-item">-->
-<!--        <a class="nav-link" href="#contact">-->
-<!--          Contact-->
-<!--        </a>-->
-<!--      </li>-->
       <li class="nav-item">
 <!--        <a class="btn btn-sm btn-warning" target="_blank" href="../../../assets/files/resume.pdf">Resume</a>-->
         <a class="btn btn-sm btn-warning" (click)="openOutreachModal()">Contact Me</a>

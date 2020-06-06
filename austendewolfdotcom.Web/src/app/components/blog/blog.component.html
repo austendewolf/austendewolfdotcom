@@ -1,6 +1,6 @@
 <div class="container page-content">
     <h1>Blog</h1>
-    <p>I offer the following packages.</p>
+    <p>{{postPack.feed.title}}</p>
     <hr>
     <div class="row">
         <div class="card" style="width: 18rem;" *ngFor="let post of postPack.items">
@@ -8,7 +8,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{post.title}}</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-warning">View Post</a>
+                <a href="{{post.link}}" target="_blank" class="btn btn-warning">View Post</a>
             </div>
         </div>
     </div>

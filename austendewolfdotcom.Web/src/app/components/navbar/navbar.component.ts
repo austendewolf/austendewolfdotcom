@@ -12,14 +12,21 @@ import {Router} from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
+    public displayBrandDropdown: boolean;
+
   constructor(private modalService: ModalService,
               private router: Router) { }
 
   ngOnInit() {
   }
 
-  public handleClickLogo(e: any): Promise<boolean> {
-      return this.router.navigate(['']);
+    public handleClickLogo(e: any): void {
+      this.displayBrandDropdown = !this.displayBrandDropdown;
+    }
+
+  public handleClickNavItem(e: any, route: string): Promise<boolean> {
+      this.displayBrandDropdown = false;
+      return this.router.navigate([route]);
   }
 
     public openOutreachModal() {
@@ -30,7 +37,7 @@ export class NavbarComponent implements OnInit {
                     id: null,
                     modal: 'create'
                 },
-                componentClasses: 'modal-lg center',
+                componentClasses: 'modal-lg right slideInRight',
                 updateRouteOnDismiss: false,
             },
         );
