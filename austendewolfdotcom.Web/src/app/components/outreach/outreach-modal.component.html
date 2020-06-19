@@ -14,7 +14,6 @@
 </div>
 <div class="modal-body">
     <ng-flat-form [form]="form"></ng-flat-form>
-    <input type="checkbox">
     <button (click)="submitContactForm()" class="btn btn-dark btn-block" [disabled]="form.status !== 'valid'">
         <span *ngIf="!contactLoading">Submit</span>
         <span *ngIf="contactLoading" class="fas fa-spinner-third fa-spin"></span>

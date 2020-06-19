@@ -1,6 +1,6 @@
 <div class="full-height align-items-center container animated slideInLeft">
     <div class="splash-text">
-        <p class="text-avenir-heavy">Hello, I'm</p>
+        <p>Hello, I'm</p>
         <span class="text-avenir-heavy font-weight-bolder display-2 d-block">Austen</span>
         <span class="text-avenir-heavy display-4 d-block text-nowrap">I am a
             <p *ngIf="currentWord == 1" class="animated flipInX d-inline-block">founder.</p>
@@ -11,36 +11,45 @@
         <div class="row">
             <div class="col-xl-6 col-lg-7 col-md-9 col-sm-12">
                 <p class="margin-top-xs">
-                    I design & build companies, products, and brands and I can teach you to do the same.
+                    I design and build digital products. I can teach you to do the same.
                 </p>
                 <p class="margin-bottom-xs text-avenir-heavy">
-                    Let's get started:
+                    I'm currently working on:
                 </p>
             </div>
             <div class="col-12 margin-top-sml">
                 <div class="row">
-                    <div class="card col-xl-4 col-md-5 col-sm-12" (click)="handleClickCard($event, 'consulting')">
-                        <div class="card-body">
-                            <h5 class="card-title margin-bottom-xs">Consulting</h5>
-                            <p class="text-muted text-nowrap margin-bottom-sml">
-                                <span class="fas fa-lock text-white margin-right-xs"></span>
-                                <span class="text-white">https://</span>
-                                <span>consulting.austendewolf.com</span>
-                            </p>
-                            <p class="card-text">1-on-1 collaboration on business, products, software, content creation, and branding.</p>
-                        </div>
+                    <div class="project-card">
+                        <span class="text-muted">by</span><span class="text-avenir-heavy">austen</span>
                     </div>
-                    <div class="card col-xl-4 col-md-5 col-sm-12" (click)="handleClickCard($event,'blog')">
-                        <div class="card-body">
-                            <h5 class="card-title margin-bottom-xs">Learning</h5>
-                            <p class="text-muted text-nowrap margin-bottom-sml">
-                                <span class="fas fa-lock text-white margin-right-xs"></span>
-                                <span class="text-white">https://</span>
-                                <span>learning.austendewolf.com</span>
-                            </p>
-                            <p class="card-text">The writings of a somewhat-successful technologist.</p>
-                        </div>
+                    <div class="project-card">
+                        <span class="text-avenir-heavy">tiptapp</span>
                     </div>
+                    <div class="project-card">
+                        <img class="img-fluid" src="../../../assets/images/flatly_logo_gradient_dark.png" alt="">
+                    </div>
+<!--                    <div class="card col-xl-4 col-md-5 col-sm-12" (click)="handleClickCard($event, 'consulting')">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title margin-bottom-xs">Consulting</h5>-->
+<!--                            <p class="text-muted text-nowrap margin-bottom-sml">-->
+<!--                                <span class="fas fa-lock text-white margin-right-xs"></span>-->
+<!--                                <span class="text-white">https://</span>-->
+<!--                                <span>consulting.austendewolf.com</span>-->
+<!--                            </p>-->
+<!--                            <p class="card-text">1-on-1 collaboration on business, products, software, content creation, and branding.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="card col-xl-4 col-md-5 col-sm-12" (click)="handleClickCard($event,'blog')">-->
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title margin-bottom-xs">Learning</h5>-->
+<!--                            <p class="text-muted text-nowrap margin-bottom-sml">-->
+<!--                                <span class="fas fa-lock text-white margin-right-xs"></span>-->
+<!--                                <span class="text-white">https://</span>-->
+<!--                                <span>learning.austendewolf.com</span>-->
+<!--                            </p>-->
+<!--                            <p class="card-text">The writings of a somewhat-successful technologist.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
                 <div class="margin-top-med">
                     <ul class="social-icons">
@@ -53,9 +62,6 @@
                         <li>
                             <a class="fab fa-github" href="https://github.com/DeAusten" target="_blank"></a>
                         </li>
-<!--                        <li>-->
-<!--                            <a class="fab fa-twitter" href="https://twitter.com/austendewolf" target="_blank"></a>-->
-<!--                        </li>-->
                         <li>
                             <a class="fab fa-npm" href="https://www.npmjs.com/~deausten" target="_blank"></a>
                         </li>

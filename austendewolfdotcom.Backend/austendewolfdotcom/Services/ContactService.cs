@@ -30,7 +30,7 @@ namespace austendewolfdotcom.Services
             templateData.firstName = contact.FirstName;
             templateData.lastName = contact.LastName;
             templateData.email = contact.Email;
-            templateData.body = contact.Description;
+            templateData.body = contact.Message;
 
             await this._emailService.SendAsync(new EmailOptions()
             {

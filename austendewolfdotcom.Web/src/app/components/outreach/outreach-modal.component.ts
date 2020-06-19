@@ -74,7 +74,7 @@ export class OutreachModalComponent implements OnInit {
         controls: [
           new FlatFormControl({
             class: '',
-            key: 'description',
+            key: 'message',
             placeholder: 'What\'s going on?',
             value: '',
             type: FlatFormControlType.TEXTAREA,
