@@ -1,64 +1,73 @@
 <nav class="navbar navbar-expand-md container fixed-top padding-top-med padding-bottom-med animated slideInDown">
-  <img class="brand-logo" src="../../../assets/images/logo_fill.svg" (click)="handleClickLogo($event)" alt="logo"/>
-  <div class="brand-dropdown" *ngIf="displayBrandDropdown">
-    <div class="brand-dropdown-body">
-      <p class="margin-bottom-sml text-avenir-heavy">Navigation</p>
-      <a class="site-option" (click)="handleClickNavItem($event, '/consulting')">
-        <div class="site-icon">
-          C
-        </div>
-        <span class="text-nowrap">
-          <span class="fas fa-lock text-warning margin-right-xs"></span>
-          <span class="text-warning">https://</span>
-          <span>consulting.austendewolf.com</span>
-        </span>
-      </a>
-      <a class="site-option" (click)="handleClickNavItem($event, '/blog')">
-        <div class="site-icon">
-          B
-        </div>
-        <span class="text-nowrap">
-          <span class="fas fa-lock text-warning margin-right-xs"></span>
-          <span class="text-warning">https://</span>
-          <span>blog.austendewolf.com</span>
-        </span>
-      </a>
+    <img class="brand-logo" (click)="handleClickNavItem($event, '')" src="../../../assets/images/logo-filled.svg" alt="logo"/>
+    <a class="navbar-brand" (click)="handleClickNavItem($event, '')">
+        <span class="text-avenir-heavy">austendewolf</span>
+        <span class="text-avenir-light brand-dot">.</span>
+        <span class="text-avenir-heavy">com</span>
+    </a>
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span (click)="openNavigationModal()" class="fas fa-signal-alt-3"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-nowrap">
+            <li class="nav-item" (clickOutside)="handleClickOutsideDropdown($event)">
+                <a class="nav-link" (click)="handleClickLogo($event)">
+                    <span class="fa fa-th app-launcher"></span>
+                </a>
+                <div>
+                    <div class="brand-dropdown animated fadeIn" *ngIf="displayBrandDropdown">
+                        <div class="brand-dropdown-body">
+                            <p class="margin-bottom-sml text-avenir-heavy">Navigation</p>
+                            <a class="site-option" (click)="handleClickNavItem($event, '')">
+                                <div class="site-icon">
+                                    AD
+                                </div>
+                                <span class="text-nowrap">
+                                  <span class="fas fa-lock margin-right-xs"></span>
+                                  <span class="text-muted text-avenir-heavy">https://</span>
+                                  <span>austendewolf.com</span>
+                                </span>
+                            </a>
+                            <a class="site-option" (click)="handleClickNavItem($event, '/consulting')">
+                                <div class="site-icon">
+                                    CbA
+                                </div>
+                                <span class="text-nowrap">
+                                  <span class="fas fa-lock margin-right-xs"></span>
+                                  <span class="text-muted text-avenir-heavy">https://</span>
+                                  <span>consulting.austendewolf.com</span>
+                                </span>
+                            </a>
+                            <a class="site-option" (click)="handleClickNavItem($event, '/blog')">
+                                <div class="site-icon">
+                                    BbA
+                                </div>
+                                <span class="text-nowrap">
+                                  <span class="fas fa-lock margin-right-xs"></span>
+                                  <span class="text-muted text-avenir-heavy">https://</span>
+                                  <span>blog.austendewolf.com</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="brand-dropdown-footer">
+                          <span>
+                            <span class="text-nowrap margin-zero">
+                              <span class="fas fa-lock margin-right-xs"></span>
+                              <span class="text-muted text-avenir-heavy">https://</span>
+                              <span>austendewolf.com</span>
+                            </span>
+                            <span> adheres to the following <a routerLink="/privacy" (click)="displayBrandDropdown = false;">Privacy Policy</a>.</span>
+                          </span>
+                        </div>
+                    </div>
+                </div>
+
+            </li>
+            <li class="nav-item">
+                <!--        <a class="btn btn-sm btn-warning" target="_blank" href="../../../assets/files/resume.pdf">Resume</a>-->
+                <a class="btn btn-sm btn-outline-dark" (click)="openOutreachModal()">Contact Me</a>
+            </li>
+        </ul>
     </div>
-    <div class="brand-dropdown-footer">
-      <span>
-        <span class="text-nowrap margin-zero">
-          <span class="fas fa-lock text-warning margin-right-xs"></span>
-          <span class="text-warning">https://</span>
-          <span>austendewolf.com</span>
-        </span>
-        <span> and it's subdomains are part of blah blah</span>
-      </span>
-    </div>
-  </div>
-  <a class="navbar-brand" (click)="handleClickNavItem($event, '')">
-    <span class="text-avenir-heavy">austendewolf</span>
-    <span class="text-avenir-light text-warning brand-dot">.</span>
-    <span class="text-avenir-heavy">com</span>
-  </a>
-  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span (click)="openNavigationModal()" class="fas fa-signal-alt-3"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto text-nowrap">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/consulting">
-          Consulting
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/blog">
-          Blog
-        </a>
-      </li>
-      <li class="nav-item">
-<!--        <a class="btn btn-sm btn-warning" target="_blank" href="../../../assets/files/resume.pdf">Resume</a>-->
-        <a class="btn btn-sm btn-warning" (click)="openOutreachModal()">Contact Me</a>
-      </li>
-    </ul>
-  </div>
 </nav>

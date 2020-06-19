@@ -1,28 +1,30 @@
 <div class="full-height align-items-center container animated slideInLeft">
     <div class="splash-text">
-        <p class="text-warning text-avenir-heavy">Hello, I'm</p>
+        <p class="text-avenir-heavy">Hello, I'm</p>
         <span class="text-avenir-heavy font-weight-bolder display-2 d-block">Austen</span>
-        <span class="text-avenir-heavy display-4 d-block text-nowrap">I am
-            <p *ngIf="currentWord == 1" class="animated flipInX d-inline-block">a creator.</p>
-            <p *ngIf="currentWord == 2" class="animated flipInX d-inline-block">an engineer.</p>
-            <p *ngIf="currentWord == 3" class="animated flipInX d-inline-block">a founder.</p>
-            <p *ngIf="currentWord == 4" class="animated flipInX d-inline-block">a coach.</p>
+        <span class="text-avenir-heavy display-4 d-block text-nowrap">I am a
+            <p *ngIf="currentWord == 1" class="animated flipInX d-inline-block">founder.</p>
+            <p *ngIf="currentWord == 2" class="animated flipInX d-inline-block">creator.</p>
+            <p *ngIf="currentWord == 3" class="animated flipInX d-inline-block">designer.</p>
+            <p *ngIf="currentWord == 4" class="animated flipInX d-inline-block">builder.</p>
         </span>
         <div class="row">
             <div class="col-xl-6 col-lg-7 col-md-9 col-sm-12">
                 <p class="margin-top-xs">
-                    I stand up up companies, design & build products, create content, and write about the entire process. <strong class="text-avenir-heavy">Why should you care..?</strong> Because I can help you do those things too.
+                    I design & build companies, products, and brands and I can teach you to do the same.
                 </p>
-                <p class="margin-bottom-xs">Let's get started:</p>
+                <p class="margin-bottom-xs text-avenir-heavy">
+                    Let's get started:
+                </p>
             </div>
-            <div class="col-12">
+            <div class="col-12 margin-top-sml">
                 <div class="row">
                     <div class="card col-xl-4 col-md-5 col-sm-12" (click)="handleClickCard($event, 'consulting')">
                         <div class="card-body">
                             <h5 class="card-title margin-bottom-xs">Consulting</h5>
                             <p class="text-muted text-nowrap margin-bottom-sml">
-                                <span class="fas fa-lock text-warning margin-right-xs"></span>
-                                <span class="text-warning">https://</span>
+                                <span class="fas fa-lock text-white margin-right-xs"></span>
+                                <span class="text-white">https://</span>
                                 <span>consulting.austendewolf.com</span>
                             </p>
                             <p class="card-text">1-on-1 collaboration on business, products, software, content creation, and branding.</p>
@@ -30,11 +32,11 @@
                     </div>
                     <div class="card col-xl-4 col-md-5 col-sm-12" (click)="handleClickCard($event,'blog')">
                         <div class="card-body">
-                            <h5 class="card-title margin-bottom-xs">Blog</h5>
+                            <h5 class="card-title margin-bottom-xs">Learning</h5>
                             <p class="text-muted text-nowrap margin-bottom-sml">
-                                <span class="fas fa-lock text-warning margin-right-xs"></span>
-                                <span class="text-warning">https://</span>
-                                <span>blog.austendewolf.com</span>
+                                <span class="fas fa-lock text-white margin-right-xs"></span>
+                                <span class="text-white">https://</span>
+                                <span>learning.austendewolf.com</span>
                             </p>
                             <p class="card-text">The writings of a somewhat-successful technologist.</p>
                         </div>
@@ -48,15 +50,15 @@
                         <li>
                             <a class="fab fa-linkedin-in" href="https://www.linkedin.com/in/deausten" target="_blank"></a>
                         </li>
-<!--                        <li>-->
-<!--                            <a class="fab fa-github" href="https://github.com/DeAusten" target="_blank"></a>-->
-<!--                        </li>-->
+                        <li>
+                            <a class="fab fa-github" href="https://github.com/DeAusten" target="_blank"></a>
+                        </li>
 <!--                        <li>-->
 <!--                            <a class="fab fa-twitter" href="https://twitter.com/austendewolf" target="_blank"></a>-->
 <!--                        </li>-->
-<!--                        <li>-->
-<!--                            <a class="fab fa-npm" href="https://www.npmjs.com/~deausten" target="_blank"></a>-->
-<!--                        </li>-->
+                        <li>
+                            <a class="fab fa-npm" href="https://www.npmjs.com/~deausten" target="_blank"></a>
+                        </li>
                     </ul>
                 </div>
             </div>

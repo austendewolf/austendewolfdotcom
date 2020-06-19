@@ -7,21 +7,26 @@ app-modal {
   z-index: 10000;
 }
 .app-modal-backdrop {
-  background-color: #0000007a;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 10000;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+
 }
 .app-modal-content {
+  overflow-x: hidden;
   background: -webkit-radial-gradient(top left, #ffffff, #f4fcff) no-repeat fixed;
   position: relative;
   width: 100%;
   margin: 125px auto auto;
   z-index: 10000;
   color: #000;
+  //border-top-left-radius: 25px;
+  //border-bottom-left-radius: 25px;
   &.center {
     position: absolute;
     top: 0;
@@ -30,6 +35,9 @@ app-modal {
     .modal-body {
       min-height: 150px !important;
     }
+  }
+  &.modal-med {
+    max-width: 600px;
   }
   &.right {
     position: absolute;
@@ -103,10 +111,6 @@ app-modal {
         color: #0393ff !important;
       }
     }
-  }
-
-  .subtitle {
-
   }
 }
 

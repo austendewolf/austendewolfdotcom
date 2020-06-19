@@ -28,6 +28,9 @@ import { BlogComponent } from './components/blog/blog.component';
 import { OutreachModalComponent } from './components/outreach/outreach-modal.component';
 import { CardComponent } from './components/card/card.component';
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
+import {ClickOutsideModule} from 'ng-click-outside';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { CookieComponent } from './components/cookie/cookie.component';
 
 @NgModule({
     declarations: [
@@ -49,6 +52,8 @@ import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
         BlogComponent,
         OutreachModalComponent,
         CardComponent,
+        PrivacyPolicyComponent,
+        CookieComponent,
     ],
     imports: [
         BrowserModule,
@@ -58,6 +63,7 @@ import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
         HttpClientModule,
         NgFlatFormModule,
         LoadingBarHttpClientModule,
+        ClickOutsideModule
     ],
     providers: [
         ContactService,

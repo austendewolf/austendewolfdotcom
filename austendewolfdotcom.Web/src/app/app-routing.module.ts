@@ -6,6 +6,7 @@ import {SoftwareComponent} from './components/software/software.component';
 import {ProjectsComponent} from './components/projects/projects.component';
 import {ConsultingComponent} from './components/consulting/consulting.component';
 import {BlogComponent} from './components/blog/blog.component';
+import {PrivacyPolicyComponent} from './components/privacy-policy/privacy-policy.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'links',
     component: MenuComponent
+  },
+  {
+    path: 'privacy',
+    component: PrivacyPolicyComponent
   }
 ];
 

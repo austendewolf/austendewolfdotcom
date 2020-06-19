@@ -210,21 +210,21 @@ hr {
   font-size: .9rem;
   overflow: auto;
 }
-ng-flat-form {
-  .control-container {
-    background-color: #ffffff0f !important;
-  }
-  input, textarea, select {
-    &:focus + label {
-      color: #64feda !important;
-    }
-  }
-  label {
-    i {
-      opacity: 1 !important;
-    }
-  }
-}
+//ng-flat-form {
+//  .control-container {
+//    background-color: #ffffff0f !important;
+//  }
+//  input, textarea, select {
+//    &:focus + label {
+//      color: #64feda !important;
+//    }
+//  }
+//  label {
+//    i {
+//      opacity: 1 !important;
+//    }
+//  }
+//}
 .social-icons {
   list-style: none !important;
   display: flex;
@@ -233,7 +233,7 @@ ng-flat-form {
     margin: 0 20px 0 20px;
     font-size: 1rem;
     :hover {
-      color: #ffc107 !important;
+      color: #a8a8a8 !important;
       cursor: pointer;
       transform: scale(1.1);
     }

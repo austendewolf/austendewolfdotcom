@@ -32,18 +32,9 @@ export class OutreachModalComponent implements OnInit {
   private initializeForm(): void {
     const controlGroups = [
       new FlatFormControlGroup({
-        title: '',
-        description: '',
+        title: 'Contact Information',
+        description: 'Let\'s get to know each other a bit. What should I call you?',
         controls: [
-          new FlatFormControl({
-            class: 'border-bottom',
-            key: 'email',
-            placeholder: 'Email',
-            value: '',
-            type: FlatFormControlType.INPUT_EMAIL,
-            required: true,
-            showValidation: true,
-          }),
           new FlatFormControl({
             class: 'border-bottom half border-right',
             key: 'firstName',
@@ -67,8 +58,23 @@ export class OutreachModalComponent implements OnInit {
             maxLength: 20,
           }),
           new FlatFormControl({
+            class: 'border-bottom',
+            key: 'email',
+            placeholder: 'Email',
+            value: '',
+            type: FlatFormControlType.INPUT_EMAIL,
+            required: true,
+            showValidation: true,
+          }),
+        ]
+      }),
+      new FlatFormControlGroup({
+        title: 'Message',
+        description: 'Let\'s talk. What\'s on your mind?',
+        controls: [
+          new FlatFormControl({
             class: '',
-            key: 'content',
+            key: 'description',
             placeholder: 'What\'s going on?',
             value: '',
             type: FlatFormControlType.TEXTAREA,
