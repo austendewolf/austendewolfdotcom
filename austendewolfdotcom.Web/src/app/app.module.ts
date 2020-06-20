@@ -18,11 +18,11 @@ import {ModalContainerDirective} from './components/modal/modal-container.direct
 import {ModalHeaderComponent} from './components/modal/modal-header/modal-header.component';
 import {ModalFooterComponent} from './components/modal/modal-footer/modal-footer.component';
 import {ModalService} from './components/modal/modal.service';
-import { OutreachModalComponent } from './components/outreach/outreach-modal.component';
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 import {ClickOutsideModule} from 'ng-click-outside';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import { CookieComponent } from './components/cookie/cookie.component';
+import {OutreachModalComponent} from './components/outreach/outreach-modal.component';
 
 @NgModule({
     declarations: [
