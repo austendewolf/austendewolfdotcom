@@ -77,49 +77,40 @@ app-modal {
 }
 
 .modal-header {
-  border-bottom: none !important;
-
-  .modal-title {
-    font-size: 1.25rem;
-    font-family: 'Avenir-Pro-Roman';
-    line-height: 50px;
-  }
-
-  .circular-icon {
-    width: 50px !important;
-    height: 50px !important;
-    background-color: transparent !important;
-    margin-right: 5px !important;
-    border-color: transparent !important;
-    &.danger {
-      background-color: rgba(#d9534f, .3) !important;
-      i,span {
-        color: #d9534f !important;
-      }
-    }
-
-    &.success {
-      background-color: rgba(#63c326, .3) !important;
-      i,span {
-        color: #63c326 !important;
-      }
-    }
-
-    &.info {
-      background-color: rgba(#0393ff, .3) !important;
-      i,span {
-        color: #0393ff !important;
-      }
-    }
-  }
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-bottom: none;
+  align-items: center;
 }
-
+.modal-header-icon-container {
+  padding-right: 15px;
+}
+.modal-header-icon {
+  background-color: #000;
+  color: #fff;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.modal-title {
+  display: block;
+  border-bottom: 0;
+  font-size: 1.5rem;
+  font-family: Avenir-Pro-Roman;
+}
+.modal-subtitle {
+  display: block;
+  font-size: .9rem;
+  color: #7a7b7b;
+}
 .close {
-  font-size: 40px !important;
-  &:hover {
-    cursor: pointer !important;
-    color: #d9534f !important;
-  }
+  opacity: .5;
+  padding: 0 20px;
+  align-items: center;
 }
 
 .modal-footer {

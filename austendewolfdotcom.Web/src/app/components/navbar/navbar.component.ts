@@ -61,19 +61,6 @@ export class NavbarComponent implements OnInit {
                         },
                     );
                     break;
-                case 'menu':
-                    this.modalService.create<ModalContext>(
-                        NavigationModalComponent,
-                        {
-                            params: {
-                                id: null,
-                                modal: 'create'
-                            },
-                            componentClasses: 'slideInRight modal-med right',
-                            updateRouteOnDismiss: false,
-                        },
-                    );
-                    break;
             }
         });
     }
