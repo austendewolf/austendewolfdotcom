@@ -28,7 +28,7 @@
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
     "moment": "^2.24.0",
-    "moment-timezone": "^0.5.27",
+    "moment-timezone": "^0.5.35",
     "ng-click-outside": "^6.0.0",
     "ng-flat-form": "^1.0.5",
     "popper.js": "^1.14.3",
